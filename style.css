@@ -43,3 +43,16 @@ header nav ul{padding-top: 30.5px;}
 .Notice_slide > div.notice ul,
 .Notice_slide > div.notice ul li{height: 100%;}
 .Notice_slide > div.notice ul li a{display: block;}
+
+
+/* slider */
+.photo_gallery { position:relative; width:1250px; margin:0 auto; padding-top:40px; }
+.photo_gallery p.photo_img { width:970px; height:690px; -webkit-box-shadow: 0px 0px 15px 0 #aaa; -moz-box-shadow: 0px       0px 15px 0 #aaa; box-shadow: 0px 0px 15px 0 #aaa; float:left; margin-right:20px; }
+.photo_gallery p.photo_img img { width:970px; height:690px; }
+.photo_gallery .photo_list { width:260px; height:690px; overflow:hidden; float:left; }
+.photo_gallery .photo_list .list_wrap ul { width:260px; list-style:none; padding:0px; margin:0px; }
+.photo_gallery .photo_list .list_wrap ul li { width:260px; height:130px; margin-bottom:10px; }
+.photo_gallery .photo_list .list_wrap ul li a img { width:260px; height:130px; vertical-align:middle; }
+.photo_gallery button { position:absolute; bottom:59px; cursor:pointer }
+.photo_gallery button.btn_prev { top:10px; right:0px; text-indent:-9999px; overflow:hidden; display:block; width:260px; height:20px; margin:0px; border:0px; padding:0px; background:url('/images/product/list2_prev.png') no-repeat left top; }
+.photo_gallery button.btn_next { top:740px; right:0px; text-indent:-9999px; overflow:hidden; display:block; width:260px; height:20px; margin:0px; border:0px; padding:0px; background:url('/images/product/list2_next.png') no-repeat left top; }

@@ -21,3 +21,37 @@ window.onload = function () {
   slide()
 }
 
+// slider
+		jQuery(document).ready(function() {
+			//Slide Gallery 이미지 샐랙터
+			jQuery(".list_wrap ul li").click(function() {
+			jQuery(this).addClass("active").siblings().removeClass();
+			jQuery(".photo_img img").attr("src",jQuery(this).children("a").attr("href"));
+			return false;
+		});
+
+		//Slide Gallery 슬라이딩 초기화
+		jQuery(".list_wrap").width("260"*parseInt(jQuery(".list_wrap ul").size())+"px");
+			jQuery(".list_wrap ul:last").prependTo(".list_wrap");
+
+			//Silde Gallery의 prev버튼
+			jQuery("button.btn_prev").click(function() {
+				jQuery(".list_wrap").animate({
+					marginTop:"+=700px"
+				},"swing",function() {
+					jQuery(".list_wrap ul:last").prependTo(".list_wrap");
+					jQuery(".list_wrap").css("margin-top","-700px");
+					jQuery(".list_wrap ul li").removeClass();
+				});
+			});
+			//Silde Gallery의 next버튼
+			jQuery("button.btn_next").click(function() {
+				jQuery(".list_wrap").animate({
+					marginTop:"-=700px"
+				},"swing",function() {
+					jQuery(".list_wrap ul:first").appendTo(".list_wrap");
+					jQuery(".list_wrap").css("margin-top","-700px");
+					jQuery(".list_wrap ul li").removeClass();
+				});
+			});
+		});
